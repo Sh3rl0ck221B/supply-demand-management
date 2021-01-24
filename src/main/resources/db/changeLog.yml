@@ -10,19 +10,15 @@ databaseChangeLog:
                 -  column:
                      name:  id
                      type:  int
-                     autoIncrement:  true
-                     constraints:
-                       primaryKey:  true
-                       nullable:  false
                 -  column:
                      name:  manufacturer
-                     type:  varchar(50)
+                     type:  text
                 -  column:
                      name:  model
-                     type:  varchar(50)
+                     type:  text
                 -  column:
                      name:  price
-                     type:  INT
+                     type:  int
                 -  column:
                      name:  mileage
-                     type:  INT
+                     type:  int

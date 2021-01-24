@@ -17,10 +17,18 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 
+@Path("/am")
 public class CarResource {
 
     @Inject
     CarRepository carRepository;
+
+    @Path("hello")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public String showCar(){
+        return "auto";
+    }
 
     @Path("/car/{id}")
     @GET
