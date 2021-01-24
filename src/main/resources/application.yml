@@ -6,3 +6,8 @@ quarkus:
     password: "automobilemeyer"
     jdbc:
       url: "jdbc:postgresql://localhost:5432/supply_demand_db"
+
+
+  liquibase:
+    migrate-at-start: true
+    change-log: db/changeLog.yml

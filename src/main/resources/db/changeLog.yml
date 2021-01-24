@@ -1,0 +1,28 @@
+databaseChangeLog:
+
+  -  changeSet:
+       id:  1
+       author:  christopher
+       changes:
+         -  createTable:
+              tableName:  car
+              columns:
+                -  column:
+                     name:  id
+                     type:  int
+                     autoIncrement:  true
+                     constraints:
+                       primaryKey:  true
+                       nullable:  false
+                -  column:
+                     name:  manufacturer
+                     type:  varchar(50)
+                -  column:
+                     name:  model
+                     type:  varchar(50)
+                -  column:
+                     name:  price
+                     type:  INT
+                -  column:
+                     name:  mileage
+                     type:  INT
