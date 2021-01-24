@@ -16,6 +16,7 @@ dependencies {
     implementation 'io.quarkus:quarkus-resteasy-jackson'
     implementation 'io.quarkus:quarkus-arc'
     implementation 'io.quarkus:quarkus-resteasy'
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.1.4'
     testImplementation 'io.quarkus:quarkus-junit5'
 }
 
