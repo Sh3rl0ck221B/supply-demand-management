@@ -1,0 +1,8 @@
+quarkus:
+  # datasource configuration
+  datasource:
+    db-kind: postgres
+    username: "intershop"
+    password: "intershop"
+    jdbc:
+      url: "jdbc:sqlserver://localhost:5432;databaseName=OHS"
