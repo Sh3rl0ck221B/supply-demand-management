@@ -2,12 +2,10 @@ version: '3'
 services:
   database:
     image: "postgres" # use latest official postgres version
-    env_file:
-      - database.env
-    # configure postgres (you must provide this file in the following form:
-        #   POSTGRES_USER=<username>
-        #   POSTGRES_PASSWORD=<password>
-        #   POSTGRES_DB=<databasename>
-
-
-#default-port: 5432
+    environment:
+      POSTGRES_USER: "automobilemeyer"
+      POSTGRES_PASSWORD: "automobilemeyer"
+      POSTGRES_DB: supply_demand_db
+    ports:
+      - "5432:5432"
+    container_name: supply_demand_db
