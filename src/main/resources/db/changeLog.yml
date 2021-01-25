@@ -1,8 +1,9 @@
 databaseChangeLog:
 
   -  changeSet:
-       id:  1
+       id:  1.0
        author:  christopher
+       comment: "Migratation of database shema"
        changes:
          -  createTable:
               tableName:  car
@@ -26,3 +27,54 @@ databaseChangeLog:
                 -  column:
                      name:  mileage
                      type:  int
+
+  - changeSet:
+      id: 1.1
+      author: Christopher
+      comment: "Setup with some example data"
+      changes:
+        - insert:
+            tableName: car
+            columns:
+              - column:
+                  name: manufacturer
+                  value: "VW"
+              - column:
+                  name: model
+                  value: "T5"
+              - column:
+                  name: price
+                  value: 3000
+              - column:
+                  name: mileage
+                  value: 200000
+        - insert:
+            tableName: car
+            columns:
+              - column:
+                  name: manufacturer
+                  value: "Nissan"
+              - column:
+                  name: model
+                  value: "Micra"
+              - column:
+                  name: price
+                  value: 5000
+              - column:
+                  name: mileage
+                  value: 40000
+        - insert:
+            tableName: car
+            columns:
+              - column:
+                  name: manufacturer
+                  value: "Skoda"
+              - column:
+                  name: model
+                  value: "Octavia"
+              - column:
+                  name: price
+                  value: 5500
+              - column:
+                  name: mileage
+                  value: 2500
