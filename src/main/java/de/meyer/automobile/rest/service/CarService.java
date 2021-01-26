@@ -3,8 +3,10 @@ package de.meyer.automobile.rest.service;
 import de.meyer.automobile.orm.CarRepository;
 import de.meyer.automobile.rest.model.Car;
 import java.util.List;
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class CarService {
 
   @Inject

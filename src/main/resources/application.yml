@@ -12,6 +12,9 @@ quarkus:
     migrate-at-start: true
     change-log: db/changeLog.yml
 
+  log:
+    level: INFO
+
 "%dev":
 
 
