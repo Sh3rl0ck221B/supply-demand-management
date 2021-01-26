@@ -1,6 +1,6 @@
-package automobile.meyer.repository;
+package de.meyer.automobile.orm;
 
-import automobile.meyer.data.Car;
+import de.meyer.automobile.rest.model.Car;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;

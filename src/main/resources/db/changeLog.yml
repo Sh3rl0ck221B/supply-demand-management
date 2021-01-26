@@ -31,7 +31,7 @@ databaseChangeLog:
   - changeSet:
       id: 1.1
       author: Christopher
-      comment: "Setup with some example data"
+      comment: "Setup with some example model"
       changes:
         - insert:
             tableName: car

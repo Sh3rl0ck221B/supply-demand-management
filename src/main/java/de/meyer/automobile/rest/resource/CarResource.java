@@ -1,8 +1,8 @@
-package automobile.meyer.resource;
+package de.meyer.automobile.rest.resource;
 
 
-import automobile.meyer.data.Car;
-import automobile.meyer.repository.CarRepository;
+import de.meyer.automobile.rest.model.Car;
+import de.meyer.automobile.orm.CarRepository;
 import java.util.List;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
