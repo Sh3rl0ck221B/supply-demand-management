@@ -11,3 +11,11 @@ quarkus:
   liquibase:
     migrate-at-start: true
     change-log: db/changeLog.yml
+
+"%dev":
+
+
+"%test":
+
+
+"%prod":
