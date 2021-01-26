@@ -3,6 +3,7 @@ package de.meyer.automobile.rest.resource;
 
 import de.meyer.automobile.rest.model.Car;
 import de.meyer.automobile.orm.CarRepository;
+import de.meyer.automobile.rest.service.CarService;
 import java.util.List;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
@@ -21,7 +22,7 @@ import javax.ws.rs.core.MediaType;
 public class CarResource {
 
     @Inject
-    CarRepository carRepository;
+    CarService carService;
 
     @Path("hello")
     @GET
@@ -34,14 +35,14 @@ public class CarResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Car showCar(@PathParam("id") Long id){
-        return carRepository.findById(id);
+        return carService.showCar(id);
     }
 
     @Path("/cars")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Car> showCarList(){
-        return carRepository.findAllCars();
+        return carService.showCarList();
     }
 
     @Path("/car")
@@ -50,8 +51,7 @@ public class CarResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Transactional
     public Car addCar(Car car){
-        car.persist();
-        return car;
+        return carService.addCar(car);
     }
 
     @Path("car/{id}")
@@ -60,7 +60,7 @@ public class CarResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Transactional
     public Car updateCar(@PathParam("id") Integer id, Car car){
-        return car;
+        return carService.updateCar(id,car);
     }
 
     @Path("car/{id}")
@@ -69,8 +69,7 @@ public class CarResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Transactional
     public boolean deleteCar(@PathParam("id") Integer id){
-        carRepository.delete("id", id);
-        return true;
+        return carService.deleteCar(id);
     }
 
 
