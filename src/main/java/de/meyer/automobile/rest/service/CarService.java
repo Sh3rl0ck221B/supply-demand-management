@@ -20,7 +20,6 @@ public class CarService {
     return carRepository.findAllCars();
   }
 
-
   public Car addCar(Car car){
     car.persist();
     return car;

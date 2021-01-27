@@ -27,7 +27,36 @@ databaseChangeLog:
                 -  column:
                      name:  mileage
                      type:  int
-
+                - column:
+                    name:  firstRegistration
+                    type:  text
+                - column:
+                    name:  powerInKW
+                    type:  int
+                - column:
+                    name:  powerInPS
+                    type:  int
+                - column:
+                    name:  fueltype
+                    type:  text
+                - column:
+                    name:  geartype
+                    type:  text
+                - column:
+                    name:  numberOfVehicleHolders
+                    type:  int
+                - column:
+                    name:  nextTechnicalExamination
+                    type:  int
+                - column:
+                    name:  consumptionPerHundredKilometer
+                    type:  int
+                - column:
+                    name:  environmentalBadge
+                    type:  int
+                - column:
+                    name:  uploadDate
+                    type:  text
   - changeSet:
       id: 1.1
       author: Christopher
