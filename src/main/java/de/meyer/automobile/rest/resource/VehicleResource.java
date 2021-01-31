@@ -1,8 +1,8 @@
 package de.meyer.automobile.rest.resource;
 
 
-import de.meyer.automobile.rest.model.Car;
-import de.meyer.automobile.rest.service.CarService;
+import de.meyer.automobile.rest.model.Vehicle;
+import de.meyer.automobile.rest.service.VehicleService;
 import java.util.List;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
@@ -18,10 +18,10 @@ import javax.ws.rs.core.MediaType;
 
 
 @Path("/am")
-public class CarResource {
+public class VehicleResource {
 
     @Inject
-    CarService carService;
+    VehicleService vehicleService;
 
     @Path("hello")
     @GET
@@ -33,15 +33,15 @@ public class CarResource {
     @Path("/car/{id}")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Car showCar(@PathParam("id") Long id){
-        return carService.showCar(id);
+    public Vehicle showCar(@PathParam("id") Long id){
+        return vehicleService.showCar(id);
     }
 
     @Path("/cars")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Car> showCarList(){
-        return carService.showCarList();
+    public List<Vehicle> showCarList(){
+        return vehicleService.showCarList();
     }
 
     @Path("/car")
@@ -49,8 +49,8 @@ public class CarResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Transactional
-    public Car addCar(Car car){
-        return carService.addCar(car);
+    public Vehicle addCar(Vehicle vehicle){
+        return vehicleService.addCar(vehicle);
     }
 
     @Path("car/{id}")
@@ -58,8 +58,8 @@ public class CarResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Transactional
-    public Car updateCar(@PathParam("id") Integer id, Car car){
-        return carService.updateCar(id,car);
+    public Vehicle updateCar(@PathParam("id") Integer id, Vehicle vehicle){
+        return vehicleService.updateCar(id, vehicle);
     }
 
     @Path("car/{id}")
@@ -68,7 +68,7 @@ public class CarResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Transactional
     public boolean deleteCar(@PathParam("id") Integer id){
-        return carService.deleteCar(id);
+        return vehicleService.deleteCar(id);
     }
 
 

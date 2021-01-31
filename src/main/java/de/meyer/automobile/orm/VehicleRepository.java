@@ -1,14 +1,14 @@
 package de.meyer.automobile.orm;
 
-import de.meyer.automobile.rest.model.Car;
+import de.meyer.automobile.rest.model.Vehicle;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
-public class CarRepository implements PanacheRepository<Car> {
+public class VehicleRepository implements PanacheRepository<Vehicle> {
 
-  public List<Car> findAllCars() {
+  public List<Vehicle> findAllCars() {
     return findAll().list();
   }
 
